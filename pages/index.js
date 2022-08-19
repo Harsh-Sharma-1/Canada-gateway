@@ -1,4 +1,5 @@
 import CardList from '../components/page/home/cardList';
+import ConnectWithUs from '../components/page/home/connectwithus';
 import Hero from '../components/page/home/hero';
 import ServiceList from '../components/page/home/servicelist';
 import WhyUs from '../components/page/home/whyus';
@@ -13,6 +14,8 @@ export default function Home() {
             <WhyUs />
             <Divider />
             <ServiceList />
+            <Divider />
+            <ConnectWithUs />
         </div>
     );
 }

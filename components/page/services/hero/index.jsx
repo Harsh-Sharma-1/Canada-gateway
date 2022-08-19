@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styles from './styles.module.scss';
 import Fade from 'react-reveal/Fade';
 const Hero = ({ text }) => {
+    console.log('hello')
     return (
         <div className={styles.container}>
             <div>
@@ -15,4 +16,6 @@ const Hero = ({ text }) => {
     );
 };
 
-export default Hero;
+const FinalHero = ({ text }) => useMemo(() => <Hero text={text} />, [text]);
+
+export default FinalHero;

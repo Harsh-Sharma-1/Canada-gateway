@@ -4,6 +4,8 @@ import styles from './styles.module.scss';
 import { MdWorkOutline } from 'react-icons/md';
 import { BsBook } from 'react-icons/bs';
 import { AiOutlineHome } from 'react-icons/ai';
+
+
 const CardList = () => {
     return (
         <div className={styles.container}>

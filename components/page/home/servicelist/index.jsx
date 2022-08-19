@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
+import Fade from 'react-reveal/Fade';
 
 const services = [
     {
@@ -36,35 +37,43 @@ const ServiceList = () => {
     const [item, setItem] = useState(0);
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
-                <img
-                    src={services[item].image}
-                    alt='study in canada with canada gateway'
-                />
-            </div>
-            <div className={styles.right}>
-                <ul>
-                    {services.map((service, i) => (
-                        <li
-                            key={i}
-                            className={i === item ? styles.active : ''}
-                            onClick={() => setItem(i)}
-                        >
-                            <h4>{service.name}</h4>
-                            <p>{service.content}</p>
-                            <span
-                                style={{
-                                    borderColor: i === item ? 'white' : 'black',
-                                }}
+            <Fade left>
+                <div className={styles.left}>
+                    <img
+                        src={services[item].image}
+                        alt='study in canada with canada gateway'
+                    />
+                </div>
+            </Fade>
+            <Fade right>
+                <div className={styles.right}>
+                    <ul>
+                        {services.map((service, i) => (
+                            <li
+                                key={i}
+                                className={i === item ? styles.active : ''}
+                                onClick={() => setItem(i)}
                             >
-                                <Link href={`/service/${service.id}`}>
-                                    Learn more.
-                                </Link>
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                                <h4>{service.name}</h4>
+                                <p>{service.content}</p>
+                                <span
+                                    style={{
+                                        borderColor:
+                                            i === item ? 'white' : 'black',
+                                    }}
+                                >
+                                    <Link href={`/service/${service.id}`}>
+                                        Learn more.
+                                    </Link>
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                    <div>
+                        <Link href={`/services`}>and much more.</Link>
+                    </div>
+                </div>
+            </Fade>
         </div>
     );
 };

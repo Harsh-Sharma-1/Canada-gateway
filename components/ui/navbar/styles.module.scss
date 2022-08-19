@@ -63,6 +63,7 @@
         flex-direction: column;
         transition: all 0.5s;
         gap: 10vh;
+        z-index: 1000 ;
 
         li {
             font-size: 15px;
