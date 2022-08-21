@@ -25,6 +25,7 @@
     h3 {
         font-size: 22px;
         font-weight: 900;
+        cursor: pointer;
     }
 }
 
@@ -40,6 +41,7 @@
         margin: 0;
         font-size: 22px;
         font-weight: 900;
+        cursor: pointer;
     }
 
     svg {
@@ -63,7 +65,7 @@
         flex-direction: column;
         transition: all 0.5s;
         gap: 10vh;
-        z-index: 1000 ;
+        z-index: 1000;
 
         li {
             font-size: 15px;

@@ -17,12 +17,33 @@
     max-width: 700px;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 10px;
     box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.05),
         4px 4px 10px rgba(0, 0, 0, 0.05);
 
     h3 {
         font-size: calc(1em + 6px);
-        font-weight: 700;
+        font-weight: 600;
     }
+}
+
+.left {
+    width: calc(6em + 4px);
+    height: calc(3em + 8px);
+    background-color: #bd3333;
+    position: absolute;
+    bottom: calc(-1em + 8px);
+    left: calc(-1em + 8px);
+    z-index: -1;
+}
+
+.right {
+    width: calc(6em + 4px);
+    height: calc(3em + 8px);
+    background-color: #bd3333;
+    position: absolute;
+    bottom: calc(-1em + 8px);
+    right: calc(-1em + 8px);
+    z-index: -1;
 }

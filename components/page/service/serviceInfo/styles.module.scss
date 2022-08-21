@@ -1,0 +1,16 @@
+.container {
+    margin: 8em 6em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #424242;
+    }
+}

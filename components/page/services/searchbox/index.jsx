@@ -14,6 +14,9 @@ const SearchBox = ({ onChange }) => {
                     label={''}
                     onChange={onChange}
                 />
+
+                <div className={styles.left}></div>
+                <div className={styles.right}></div>
             </div>
         </div>
     );

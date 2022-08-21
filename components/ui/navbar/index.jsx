@@ -2,15 +2,27 @@ import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
     };
+
+    const router = useRouter();
+
+    const clickHandler = () => {
+        setMenu(false);
+    };
     return (
         <>
             <div className={styles.container}>
-                <h3>
+                <h3
+                    onClick={() => {
+                        router.push('/');
+                    }}
+                >
                     Canada <span>Gateway</span>
                 </h3>
                 <ul>
@@ -26,7 +38,11 @@ const Navbar = () => {
             </div>
 
             <div className={styles.phonecontainer}>
-                <h3>
+                <h3
+                    onClick={() => {
+                        router.push('/');
+                    }}
+                >
                     Canada <span>Gateway</span>
                 </h3>
                 <ul
@@ -34,14 +50,14 @@ const Navbar = () => {
                         top: menu ? '0vh' : '-100vh',
                     }}
                 >
-                    <li>
+                    <li onClick={clickHandler}>
                         <Link href='/'>Home</Link>
                     </li>
-                    <li>
-                        <Link href='/'>Services</Link>
+                    <li onClick={clickHandler}>
+                        <Link href='/services'>Services</Link>
                     </li>
-                    <li>About us</li>
-                    <li>Contact</li>
+                    <li onClick={clickHandler}>About us</li>
+                    <li onClick={clickHandler}>Contact</li>
                     <BiX className='icon' onClick={toggleMenu} />
                 </ul>
                 <BiMenuAltRight onClick={toggleMenu} />
